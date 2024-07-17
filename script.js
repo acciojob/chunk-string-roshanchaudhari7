@@ -1,9 +1,11 @@
 function stringChop(str, size) {
   // your code here
+	if (!str) {
+        return [];
+    } 
 	let ans = [];
     for(let i = 0; i < str.length; i += size) {
-        const chunkWord = str.substring(i, i + size);
-        ans.push(chunkWord);
+        ans.push(str.substr(i, size));
     }
     return ans;
 }
